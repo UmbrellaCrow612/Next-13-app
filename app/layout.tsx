@@ -1,3 +1,4 @@
+import { ClientNavLink } from "./components/clientNavLink";
 import "./styles/globals.css";
 
 export default function RootLayout({
@@ -14,7 +15,10 @@ export default function RootLayout({
       </head>
 
       <body>
-        <nav className="p-1">Global Nav</nav>
+        <nav className="flex items-center justify-center gap-4 p-1">
+          <ClientNavLink href="/">Home</ClientNavLink>
+          <ClientNavLink href="/nested">Nested</ClientNavLink>
+        </nav>
         <main>{children}</main>
         <footer className="p-1">Global Footer</footer>
       </body>
